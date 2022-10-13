@@ -1,6 +1,19 @@
 * {
-    
     margin: 0;
+}
+
+.nav {
+
+    padding: 1%;
+    list-style-type: none;
+    background-color: chocolate;
+}
+
+li {
+    color: crimson;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    padding: 1%;
 }
 
 header {
@@ -23,6 +36,7 @@ html {
 body {
     color: rgb(255, 0, 0);
     font-family: Arial, sans-serif;
+    background-color: lightblue;
 }
 
 h1 {
@@ -55,6 +69,7 @@ h3 {
     display: flex;
     justify-content: center;
     background-color: royalblue;
+    justify-content: space-evenly;
     padding: 10px;
 }
   
@@ -62,21 +77,62 @@ h3 {
     background-color: blue;
     min-width: 100px;
     margin: 8px;
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100px;
     font-size: 30px;
+    text-align: center;
+        align-items: center;
 }
 
 @media screen and (max-width: 950px) {
     .flex-container {
         display: block;
     }
-    .flex-container > div {
-        display:inline-flex;
-        text-align: center;
-        align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #98f321;
+    padding: 10px;
+}
+.grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6 {
+    background-color: blue;
+    border: 1px solid red;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-item2 {
+    background-color: pink;
+}
+
+.grid-item3 {
+    background-color: purple;
+}
+
+.grid-item4 {
+    background-color: orange;
+}
+.grid-item5 {
+    background-color: green;
+}
+
+.grid-item6 {
+    background-color: black;
+}
+
+@media screen and (max-width: 1100px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
